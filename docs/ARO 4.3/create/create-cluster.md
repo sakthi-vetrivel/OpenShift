@@ -183,7 +183,7 @@ az network vnet subnet update \
 
 ## Create the cluster
 
-Run the following command to create a cluster.
+Run the following command to create a cluster. Optionally, you can pass a pull secret which enables your cluster to access Red Hat container registries along with additional content. Access your pull secret by navigating to the [Red Hat OpenShift Cluster Manager](https://cloud.redhat.com/openshift/install/azure/installer-provisioned) and clicking Copy Pull Secret.
 
 ```azurecli-interactive
 az aro create \
@@ -193,7 +193,11 @@ az aro create \
   --master-subnet master-subnet \
   --worker-subnet worker-subnet
   # --domain foo.example.com # [OPTIONAL] custom domain
+<<<<<<< HEAD
   # --pull-secret @pull-secret.txt # [OPTIONAL] pull secret
+=======
+  # --pull-secret 'Pull secret from https://cloud.redhat.com/openshift/install/azure/installer-provisioned/' # [OPTIONAL] 
+>>>>>>> 7a264e87e52b973cbe02a87c4ba2c6aa5558161b
 ```
 
 >[!NOTE]
